@@ -1,13 +1,14 @@
 import Section from './Section'
 import styles from './styles.module.scss'
-import { Color, Status } from './types'
+import { Status } from './types'
+import { getMeterColors } from './meter.util'
 
 type Props = {
 	status: Status
 }
 
 const Meter = ({ status }: Props) => {
-	const colors: Color[] = ['gray', 'gray', 'gray']
+	const colors = getMeterColors(status)
 
 	return (
 		<div>

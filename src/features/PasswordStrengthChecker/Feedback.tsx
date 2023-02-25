@@ -1,13 +1,14 @@
 import styles from './styles.module.scss'
-import { Color, Status } from './types'
+import { Status } from './types'
+import { getStatusColor, getTip } from './feedback.util'
 
 type Props = {
 	status: Status
 }
 
 const Feedback = ({ status }: Props) => {
-	const statusColor: Color = 'red'
-	const tip = 'A strong password must contain letters, numbers, and symbols.'
+	const statusColor = getStatusColor(status)
+	const tip = getTip(status)
 
 	return (
 		<div>

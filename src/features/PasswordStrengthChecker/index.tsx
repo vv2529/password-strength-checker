@@ -2,16 +2,15 @@ import React, { useState } from 'react'
 import Feedback from './Feedback'
 import Meter from './Meter'
 import styles from './styles.module.scss'
-import { Status } from './types'
+import { checkStatus } from './util'
 
 const PasswordStrengthChecker = () => {
 	const [password, setPassword] = useState('')
 
-	const status: Status = 'easy'
+	const status = checkStatus(password)
 
 	const onPasswordInput: React.FormEventHandler<HTMLInputElement> = (e) => {
-		const newPassword = e.currentTarget.value
-		setPassword(newPassword)
+		setPassword(e.currentTarget.value)
 	}
 
 	return (
