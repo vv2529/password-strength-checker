@@ -4,6 +4,7 @@ specifiers:
   '@types/node': ^16.18.12
   '@types/react': ^18.0.28
   '@types/react-dom': ^18.0.11
+  normalize-scss: ^7.0.1
   react: ^18.2.0
   react-dom: ^18.2.0
   react-scripts: 5.0.1
@@ -14,6 +15,7 @@ dependencies:
   '@types/node': 16.18.12
   '@types/react': 18.0.28
   '@types/react-dom': 18.0.11
+  normalize-scss: 7.0.1
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
   react-scripts: 5.0.1_xbzwpkj3pjlwuffzfbhk2u64dy
@@ -6776,6 +6778,10 @@ packages:
   /normalize-range/0.1.2:
     resolution: {integrity: sha512-bdok/XvKII3nUpklnV6P2hxtMNrCboOjAcyBuQnWEhO665FwrSNRxU+AqpsyvO6LgGYPspN+lu5CLtw4jPRKNA==}
     engines: {node: '>=0.10.0'}
+    dev: false
+
+  /normalize-scss/7.0.1:
+    resolution: {integrity: sha512-qj16bWnYs+9/ac29IgGjySg4R5qQTp1lXfm7ApFOZNVBYFY8RZ3f8+XQNDDLHeDtI3Ba7Jj4+LuPgz9v/fne2A==}
     dev: false
 
   /normalize-url/6.1.0:

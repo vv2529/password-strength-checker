@@ -1,29 +1,82 @@
+@import '../../var';
+
 .checker {
+	width: 90%;
+	padding: 1em;
+	border-radius: 1em;
+	box-shadow: 0 0 1em darken($bg-color, 3%);
+	background: scale-color(lighten($bg-color, 4%), $alpha: -25%);
+	transition: background-color 0.4s;
+
+	&:hover,
+	&:focus-within {
+		background: scale-color(lighten($bg-color, 5%), $alpha: -25%);
+	}
+
+	@media (min-width: 769px) {
+		& {
+			max-width: 770px * 0.9;
+		}
+	}
 }
 
 .input {
+	width: 100%;
+	margin-bottom: 0.75em;
+	padding: 0.25em 0.75em;
+	border: none;
+	border-bottom: 1px solid darken($font-color, 50%);
+	background: none;
+	color: $font-color;
+
+	&:hover {
+		border-bottom-color: darken($font-color, 25%);
+	}
+
+	&:focus {
+		border-bottom-color: $font-color;
+		outline: none;
+	}
 }
 
 .sections {
+	margin: 1em 0 0;
+	display: flex;
+	justify-content: center;
 }
 
 .section {
+	width: 0;
+	margin: 0 0.25em;
+	padding: 1em;
 }
 
 .feedback {
+	margin: 0.5em 0;
 }
 
 .output {
+	display: block;
+	margin-bottom: 1em;
+	text-align: center;
 }
 
 .tip {
+	padding: 0.25em 0;
+	padding-left: 0.75em;
+	border-left: 0.35em solid darken($font-color, 25%);
+	color: darken($font-color, 25%);
+	font-size: 0.8em;
+	font-style: italic;
 }
 
-.gray {
-}
-.red {
-}
-.yellow {
-}
-.green {
+$colors: gray, red, yellow, green;
+
+@each $color in $colors {
+	.bg-#{$color} {
+		background-color: scale-color($color, $saturation: -10%, $lightness: -5%);
+	}
+	.text-#{$color} {
+		color: $color;
+	}
 }

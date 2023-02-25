@@ -4,9 +4,13 @@ import PasswordStrengthChecker from './features/PasswordStrengthChecker'
 const App = () => {
 	return (
 		<div className={styles['app']}>
-			<header className={styles['header']}>Password Strength Checker</header>
+			<header className={styles['header']}>
+				<h1 className={styles['header-title']}>Password Strength Checker</h1>
+			</header>
 			<main className={styles['main']}>
-				<PasswordStrengthChecker />
+				<div className={styles['main-inner']}>
+					<PasswordStrengthChecker />
+				</div>
 			</main>
 			<footer className={styles['footer']}>
 				Made by{' '}

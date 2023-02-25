@@ -33,11 +33,10 @@ const PasswordStrengthChecker = () => {
 			</div>
 			{output && (
 				<div className={styles['feedback']}>
-					<div>
-						Password strength:{' '}
-						<output className={`${styles['output']} ${styles[outputColor]}`}>{output}</output>
-					</div>
-					<div className={styles['tip']}>{tip}</div>
+					<output className={`${styles['output']} ${styles[`text-${outputColor}`]}`}>
+						{output}
+					</output>
+					{tip && <div className={styles['tip']}>{tip}</div>}
 				</div>
 			)}
 		</div>

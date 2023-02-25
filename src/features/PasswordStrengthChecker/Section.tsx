@@ -6,7 +6,7 @@ type Props = {
 }
 
 const Section = ({ color }: Props) => {
-	return <div className={`${styles['section']} ${styles[color]}`}></div>
+	return <div className={`${styles['section']} ${styles[`bg-${color}`]}`}></div>
 }
 
 export default Section
