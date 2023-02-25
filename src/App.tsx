@@ -8,9 +8,7 @@ const App = () => {
 				<h1 className={styles['header-title']}>Password Strength Checker</h1>
 			</header>
 			<main className={styles['main']}>
-				<div className={styles['main-inner']}>
-					<PasswordStrengthChecker />
-				</div>
+				<PasswordStrengthChecker />
 			</main>
 			<footer className={styles['footer']}>
 				Made by{' '}

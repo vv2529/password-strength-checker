@@ -2,14 +2,15 @@
 
 .checker {
 	width: 90%;
-	padding: 1em 1.25em;
+	padding: 1em 1.25em 2em;
 	border-radius: 1em;
 	box-shadow: 0 0 1em darken($bg-color, 3%);
 	background: scale-color(lighten($bg-color, 4%), $alpha: -25%);
-	transition: background-color 0.4s;
+	transition: background-color 0.5s, box-shadow 0.5s;
 
 	&:hover,
 	&:focus-within {
+		box-shadow: 0 0 2em darken($bg-color, 3%);
 		background: scale-color(lighten($bg-color, 5%), $alpha: -25%);
 	}
 
@@ -64,31 +65,46 @@
 }
 
 .feedback {
-	margin: 0.5em 0;
+	margin: 0.5em 0 0;
 }
 
 .output {
 	display: block;
-	margin-bottom: 1em;
 	text-align: center;
 }
 
 .tip {
+	margin: 1.5em 0 -0.5em;
 	padding: 0.25em 0;
 	padding-left: 0.75em;
-	border-left: 0.35em solid darken($font-color, 25%);
-	color: darken($font-color, 25%);
-	font-size: 0.8em;
-	font-style: italic;
+	display: flex;
+	align-items: center;
+
+	&-icon {
+		flex-shrink: 0;
+		margin-right: 0.6em;
+		color: darken($font-color, 15%);
+	}
+
+	&-text {
+		color: darken($font-color, 25%);
+		font-size: 0.8em;
+		font-style: italic;
+	}
 }
 
-$colors: gray, red, yellow, green;
+$colors: (
+	'gray': hsl(0, 0%, 50%),
+	'red': hsl(0, 50%, 50%),
+	'yellow': hsl(60, 50%, 50%),
+	'green': hsl(120, 50%, 50%),
+);
 
-@each $color in $colors {
-	.bg-#{$color} {
-		background-color: scale-color($color, $saturation: -10%, $lightness: -5%);
+@each $key, $color in $colors {
+	.bg-#{$key} {
+		background-color: $color;
 	}
-	.text-#{$color} {
+	.text-#{$key} {
 		color: $color;
 	}
 }
