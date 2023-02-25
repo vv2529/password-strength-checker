@@ -1,6 +1,6 @@
-# React app
+# Password Strength Checker
 
-React app
+A web app that provides a UI to check the strength of a password.
 
 ## Create React App
 
